@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+F:\JSPIDER\JAVA PROGRAMS\3-ECLIPS\Arrays\.metadata\.plugins\org.eclipse.jdt.core
+3497328396.index
+1865797976.index
+1696264553.index
+2491072749.index
+2279506133.index

@@ -1,0 +1,10 @@
+package a;
+
+public class ZE_40_InsertEleAt0Index {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package b_Programs;
+
+public class E2_SumOfAllDiagonal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

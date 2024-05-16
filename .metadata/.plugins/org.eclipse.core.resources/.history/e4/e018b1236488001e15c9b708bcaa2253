@@ -1,0 +1,136 @@
+package b_Programs;
+
+public class A_Methods {
+
+	public static void reverse(int[][] a) {
+		for (int i = a.length - 1; i >= 0; i--) {
+			for (int j = a[i].length - 1; j >= 0; j--) {
+				System.out.print(a[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+
+	public static int sum(int[][] a) {
+		int sum = 0;
+		for (int[] m : a) {
+			for (int n : m) {
+				sum += n;
+			}
+		}
+		return sum;
+	}
+
+	public static void firstAndLastRow(int[][] a) {
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[i].length; j++) {
+				if (i == 0 || i == a.length - 1) {
+					System.out.print(a[i][j] + "\t");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	public static void sumOfDiagonal(int[][] a) {
+		int sumL = 0;
+		int sumR = 0;
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[i].length; j++) {
+				if (i == j) {
+					sumL += a[i][j];
+				}
+				if ((i + j) == (a.length - 1)) {
+					sumR += a[i][j];
+				}
+			}
+		}
+		System.out.println("Sum of left diagonal : " + sumL);
+		System.out.println("Sum of right diagonal : " + sumR);
+	}
+
+	public static int sumOfAllDiagonal(int[][] a) {
+		int sum = 0;
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[i].length; j++) {
+				if (i == j || (i + j) == (a.length - 1)) {
+					sum += a[i][j];
+				}
+			}
+		}
+		return sum;
+	}
+
+	public static void belowMajorDiagonalEle(int[][] a) {
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j <= i; j++) {
+				System.out.print(a[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+
+	public static int[][] add(int[][] a, int[][] b) {
+		int[][] c = new int[a.length][b.length];
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < b.length; j++) {
+				c[i][j] = a[i][j] + b[i][j];
+			}
+		}
+		return c;
+	}
+
+	public static int[][] pascal(int[][] a) {
+		for (int i = 0; i < a.length; i++) {
+			a[i] = new int[i + 1];
+			for (int j = 0; j < a[i].length; j++) {
+				if (j == 0 || j == i) {
+					a[i][j] = 1;
+				} else {
+					a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+				}
+			}
+		}
+		return a;
+	}
+
+	public static int[][] matrixMultiplication(int[][] a, int[][] b) {
+		int[][] c = new int[a.length][b.length];
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a.length; j++) {
+				for (int k = 0; k < a[i].length; k++) {
+					c[i][j] += a[i][k] * b[k][j];
+				}
+			}
+		}
+		return c;
+	}
+
+	public static int[][] transposeOfmatrix(int[][] a) {
+		int rowCount = a.length;
+		int colCount = 0;
+//		int prvColCount = 0;
+		int curColCount = 0;
+		int[][] b = new int[0][0];
+		for (int i = 0; i < a.length; i++) {
+			int prvColCount = curColCount;
+			for (int j = 0; j < a[i].length; j++) {
+				colCount += 1;
+			}
+			if (curColCount != prvColCount) {
+				System.out.println("Transpose of matrix is not possible");
+				return b;
+			}
+			curColCount = colCount;
+			colCount = 0;
+
+		}
+		b = new int[colCount][rowCount];
+		for (int i = 0; i < colCount; i++) {
+			for (int j = 0; j < rowCount; j++) {
+				b[i][j] = a[j][i];
+			}
+		}
+		return b;
+	}
+}

@@ -1,0 +1,17 @@
+package b_Programs;
+
+public class H_PascalTriangle {
+
+	public static void main(String[] args) {
+		int[][] a=new int[5][];
+		a=A_Methods.pascal(a);
+		for(int[] m:a) {
+			for(int n:m) {
+				System.out.print(n+"\t");
+			}
+			System.out.println();
+		}
+
+	}
+
+}

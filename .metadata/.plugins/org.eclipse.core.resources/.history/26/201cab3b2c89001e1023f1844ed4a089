@@ -1,0 +1,14 @@
+package a;
+
+public class ZC_38_SortCharArray {
+
+	public static void main(String[] args) {
+		System.out.println('A'<'Z');
+		char[] c= {'R','A','C','D','B'};
+		c=A_Methods.sortCharacterArray(c);
+		for(char m:c) {
+			System.out.print(m+" ");
+		}
+	}
+
+}
